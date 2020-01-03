@@ -1,0 +1,23 @@
+{
+  "name": "kcorock",
+  "version": "1.0.0",
+  "description": "KScott's Corruptor",
+  "main": "index.js",
+  "dependencies": {
+    "@nodegui/nodegui": "^0.12.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "qode index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KScottDB/kcorock.git"
+  },
+  "author": "KScott",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KScottDB/kcorock/issues"
+  },
+  "homepage": "https://github.com/KScottDB/kcorock#readme"
+}
