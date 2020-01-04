@@ -1,4 +1,4 @@
-![](logo.png)
+![](assets/logo.png)
 
 KScott's Corruptor. .rotpurroC s'ttocSK
 
