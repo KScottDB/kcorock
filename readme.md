@@ -10,6 +10,7 @@ In fact, still a Hello World program at the time of
 writing.
 
 ## Install ##
+
 Make sure you have the required tools for [NodeGui][0].
 
 See [the NodeGui Getting started page][1] for

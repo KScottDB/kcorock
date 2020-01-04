@@ -1,4 +1,5 @@
 {
     "window_title": "kcorock Alpha",
-    "logo": "logo.png"
+    "logo": "assets/logo.png",
+    "icon": "assets/icon.ico"
 }

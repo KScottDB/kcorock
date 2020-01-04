@@ -1,6 +1,7 @@
 const {
     QMainWindow,
-    QLabel
+    QLabel,
+    QIcon
 } = require("@nodegui/nodegui");
 
 const {
@@ -18,6 +19,7 @@ global.theme = {};
 
 function ThemeApply() {
     FormMain.setWindowTitle(global.theme.window_title);
+    FormMain.setWindowIcon( new QIcon(global.theme.icon) );
 }
 
 function ThemeLoad(filename) {
