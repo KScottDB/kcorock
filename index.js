@@ -1,25 +1,44 @@
 const {
     QMainWindow,
+    QWidget,
     QLabel,
-    QIcon
+    QIcon,
+    QPixmap,
+    FlexLayout
 } = require("@nodegui/nodegui");
 
 const {
     readFileSync
 } = require("fs");
 
-const FormMain = new QMainWindow();
-FormMain.setGeometry(0, 0, 300, 500);
-FormMain.center();
+// Logo
+const logoLabel = new QLabel();
+logoLabel.setObjectName("logoLabel");
+logoLabel.setText("peepee");
+
+// FormMain
+const mainForm = new QWidget();
+mainForm.setLayout(new FlexLayout());
+mainForm.setGeometry(0, 0, 300, 500);
+
+mainForm.layout.addWidget(logoLabel);
 
 // Protect my precious child from the filthy garbage man
-global.win = FormMain;
+global.win = mainForm;
 
 global.theme = {};
 
 function ThemeApply() {
-    FormMain.setWindowTitle(global.theme.window_title);
-    FormMain.setWindowIcon( new QIcon(global.theme.icon) );
+    mainForm.setWindowTitle( global.theme.window_title );
+    mainForm.setWindowIcon( new QIcon(global.theme.icon) );
+
+    global.logo = new QPixmap( global.theme.logo );
+    logoLabel.setGeometry(
+        0, 0,
+        global.logo.width(), global.logo.height()
+    );
+    logoLabel.setPixmap( global.logo );
+    mainForm.setStyleSheet( global.theme.style );
 }
 
 function ThemeLoad(filename) {
@@ -30,4 +49,4 @@ function ThemeLoad(filename) {
 // Apply themes
 ThemeLoad("assets/theme.json");
 
-FormMain.show();
+mainForm.show();

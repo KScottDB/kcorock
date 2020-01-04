@@ -11,13 +11,25 @@ writing.
 
 ## Install ##
 
-Make sure you have the required tools for [NodeGui][0].
+This program is written in [Node.js][0].
 
-See [the NodeGui Getting started page][1] for
+If you are installing on Windows, make sure
+you check "put node in PATH" or whatever.
+
+On most Linux distributions, you can just install the "npm" package
+with whatever package manager you have.
+
+e.g. `pacman -Sy npm`, `apt install npm`...
+
+[0]: https://nodejs.org/
+
+Make sure you have the required tools for [NodeGui][1].
+
+See [the NodeGui Getting started page][2] for
 detailed and up-to-date information.
 
-[0]: https://nodegui.org/
-[1]: https://docs.nodegui.org/docs/guides/getting-started/
+[1]: https://nodegui.org/
+[2]: https://docs.nodegui.org/docs/guides/getting-started/
 
 NodeGui requirements rewritten here for lazy people like me
 (as of 1/3/2020):
