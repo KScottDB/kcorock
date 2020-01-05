@@ -1,6 +1,10 @@
 {
     "window_title": "kcorock Alpha",
+    "strings": {
+        "openLabel":  "Source file:",
+        "openButton": "Browse..."
+    },
     "logo": "assets/logo.png",
     "icon": "assets/icon.ico",
-    "style": ""
+    "style": "assets/theme.css"
 }
