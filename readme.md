@@ -6,48 +6,50 @@ KScott's Corruptor. .rotpurroC s'ttocSK
 
 Very, very unfinished.
 
-In fact, still a Hello World program at the time of
-writing.
+My first wxGlade program.
 
 ## Install ##
 
-This program is written in [Node.js][0].
+This program is written in C++, and uses [wxWidgets][0] and
+[wxGlade][1] as a GUI framework.
 
-If you are installing on Windows, make sure
-you check "put node in PATH" or whatever.
+[0]: https://wxwidgets.org/
+[1]: http://wxglade.sourceforge.net/
 
-On most Linux distributions, you can just install the "npm" package
-with whatever package manager you have.
+On most Linux distributions, you can install `base-devel` and
+`wxgtk` or equivalent with your package manager.
 
-e.g. `pacman -Sy npm`, `apt install npm`...
+e.g. `sudo pacman -Sy wxgtk base-devel`,
+     `sudo apt install wxgtk build-essential`...
 
-[0]: https://nodejs.org/
+Arch has an AUR package for wxGlade, (which is what I used).
 
-Make sure you have the required tools for [NodeGui][1].
+`yay -S wxglade` (or whatever AUR helper you use)
 
-See [the NodeGui Getting started page][2] for
-detailed and up-to-date information.
+On Windows, you'll likely need to use MinGW or spend like 5
+hours getting this to compile on Visual Studio or MonoDevelop.
 
-[1]: https://nodegui.org/
-[2]: https://docs.nodegui.org/docs/guides/getting-started/
+(If you do, *please* make a pull request with the SLN! <3)
 
-NodeGui requirements rewritten here for lazy people like me
-(as of 1/3/2020):
+Also make sure to add wxGlade to the PATH somehow on Windows
+for the Makefile to work.
 
-- A 64-bit OS
-- CMake 3.1+
-- NodeJS 12.x+
-- Make/GCC v7 (MacOS/Linux)
-- Visual Studio >=2017 (Windows)
-- `pkg-config` and `build-essential` (Ubuntu)
-
-After that, it's as simple as typing
+It's (hopefully) as simple as typing
 
 ```
 git clone https://github.com/KScottDB/kcorock.git
 cd kcorock
-npm i
-npm start
+make kcorock
 ```
 
 in your shell.
+
+## .kct File Format ##
+
+it stands for KCorock Theme
+
+nothing to write about it yet, nor much code relating to it,
+but clues of what the implementation will be are in the file
+itself.
+
+it is just plain text, ini-alike.

@@ -1,2 +1,9 @@
-node_modules/**
-node_modules
+**.wxg~
+**.h.gch
+**.o
+**.cpp~
+**.h~
+gui/gladeFile.cpp
+gui/gladeFile.h
+gui/gladeFile
+build
