@@ -30,8 +30,8 @@ void KcorocK_Frame::LoadTheme(string filename) {
     SetIcon(tempIcon);
     SetSize(
         wxSize(
-            stoi( ini.GetValue("window","sizew","assets/icon.ico") ),
-            stoi( ini.GetValue("window","sizeh","assets/icon.ico") )
+            stoi( ini.GetValue("window","sizew","300") ),
+            stoi( ini.GetValue("window","sizeh","450") )
         )
     );
 
