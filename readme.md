@@ -49,12 +49,6 @@ make kcorock
 
 in your shell.
 
-## .kct File Format ##
+## Theme File Format ##
 
-it stands for KCorock Theme
-
-nothing to write about it yet, nor much code relating to it,
-but clues of what the implementation will be are in the file
-itself.
-
-it is just plain text, ini-alike.
+kcorock themes are ini files.
