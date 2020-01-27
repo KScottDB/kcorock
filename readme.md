@@ -11,20 +11,25 @@ My first wxGlade program.
 ## Install ##
 
 This program is written in C++, and uses [wxWidgets][0] and
-[wxGlade][1] as a GUI framework.
+wxGlade as a GUI framework.
 
 [0]: https://wxwidgets.org/
-[1]: http://wxglade.sourceforge.net/
 
 On most Linux distributions, you can install `base-devel` and
-`wxgtk` or equivalent with your package manager.
+`wxgtk` or equivalent with your package manager for G++ and
+wxWidgets.
 
 e.g. `sudo pacman -Sy wxgtk base-devel`,
      `sudo apt install wxgtk build-essential`...
 
-Arch has an AUR package for wxGlade, (which is what I used).
+Other dependencies:
+- [simpleini][1] (`simpleini` on the AUR)
+- [wxGlade][2]   (`wxglade`   on the AUR)
 
-`yay -S wxglade` (or whatever AUR helper you use)
+[1]: https://github.com/brofield/simpleini/
+[2]: http://wxglade.sourceforge.net/
+
+On Arch, install required AUR packages: `yay -S simpleini wxglade`
 
 On Windows, you'll likely need to use MinGW or spend like 5
 hours getting this to compile on Visual Studio or MonoDevelop.

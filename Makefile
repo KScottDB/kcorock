@@ -1,5 +1,6 @@
 CXX=g++
 GLADEOUT=gladeFile
+LIB=
 
 all: build/kcorock
 
@@ -23,5 +24,5 @@ build/assets: gui/assets build
 	cp -r gui/assets build/assets
 
 build/kcorock: main/main.cpp gui/$(GLADEOUT).cpp build/assets
-	$(CXX) -g -I. `wx-config --cxxflags --libs` $< gui/$(GLADEOUT).cpp -o $@
+	$(CXX) -g -I. `wx-config --cxxflags --libs` $(LIB) $< gui/$(GLADEOUT).cpp -o $@
 	
