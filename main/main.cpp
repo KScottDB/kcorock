@@ -53,8 +53,36 @@ void KcorocK_Frame::LoadTheme(string filename) {
     );
 }
 
+void KcorocK_Frame::Show_About(wxCommandEvent &event) {
+    MyDialog* AboutDialog = new MyDialog(this, wxID_ANY, wxEmptyString);
+    AboutDialog->Show();
+    event.Skip();
+}
+
+void KcorocK_Frame::Bind_Events() {
+    Bind(wxEVT_MENU, &KcorocK_Frame::Show_About, this, about->GetId());
+}
+
+// TODO: ABOUT "OK" BUTTON DOES NOT CLOSE THE WINDOW //
+
+void About_Window::Exit_Dialog(wxCommandEvent &event) {
+    event.Skip();
+    Close();
+}
+
+void About_Window::Bind_Events() {
+    Bind(wxEVT_BUTTON, &About_Window::Exit_Dialog, this, button_OK->GetId());
+}
+
+BEGIN_EVENT_TABLE(About_Window, MyDialog)
+    EVT_BUTTON(wxID_ANY, About_Window::Exit_Dialog)
+END_EVENT_TABLE();
+
+///////////////////////////////////////////////////////
+
 bool KcorocK::OnInit() {
     wxInitAllImageHandlers();
+
     KcorocK_Frame* frame_Main = new KcorocK_Frame(NULL, wxID_ANY, wxEmptyString);
     SetTopWindow(frame_Main);
     frame_Main->Show();
