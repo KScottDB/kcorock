@@ -44,10 +44,12 @@ It's (hopefully) as simple as typing
 ```
 git clone https://github.com/KScottDB/kcorock.git
 cd kcorock
-make kcorock
+make clean all
 ```
 
 in your shell.
+
+( Build will be placed in the `build/` directory. )
 
 ## Theme File Format ##
 
